@@ -1,0 +1,168 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Mano kodas */
+
+body{
+    background-color: rgb(240, 240, 240)
+}
+h1{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px 0 20px 10px;
+}
+p{
+    margin: 15px  0 10px 10px;
+}
+ul{
+    margin: 15px 0 10px 35px;
+}
+ul img {
+    max-height: 12px;
+    max-width: 12px;
+    margin-right: 10px;
+}
+
+/* Lenteles pradzia */
+table, tr,td,th {
+    border: 1px solid black;
+}
+th{
+    padding-right: 20px;
+    border-bottom: 5px solid yellow;
+}
+tr:first-child{
+    background: blue; /* Padding, Margin ?*/
+    
+}
+th:first-child, th:last-child{
+   border-radius: 20px;
+}
+tr:nth-child(1) {
+    color: white;
+    font-weight: bold;  
+}
+tr:nth-child(even){
+    background-color: tomato;
+}
+table {
+    margin: 30px 0 10px 10px;
+    background-color: aquamarine;
+}
+td{
+    padding: 10px 20px 10px 0px;
+}
+/* Lenteles pabaiga */
+
+/* Forma */
+fieldset{
+    border:1px solid black;
+    margin: 15px  0 10px 10px;
+    width: 50%;
+}
+legend{
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+fieldset>div {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+fieldset>div input{
+    position: absolute; /* No responsive */
+    top: 0;
+    left:0;
+    margin-left: 50%;
+}
+fieldset>div select{
+    position: absolute; /* No responsive */
+    top: 0;
+    left:0;
+    margin-left: 50%;
+}
+fieldset>div span{
+    display: inline-block;
+    top: 0;
+    left:0;
+    margin-left: 50%;
+}
+
+
+.lent>div {
+    display: inline-block;
+    top: 0;
+    left: 0 ;
+    margin-left: 50%;
+}
+.lent>div span {
+display: inline-block;
+position: absolute;
+top: 0;
+left:0;
+margin-left: 54%;
+}
+.lent .pask input {
+    margin-left: 70%;
+}
+.lent>div:last-child span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 74%;
+}
+/* Forma end */
+/* Button */
+input[type="submit"]{
+    background:green;
+    border-radius: 15px;
+    color:white;
+    margin-left: 200px;
+}
