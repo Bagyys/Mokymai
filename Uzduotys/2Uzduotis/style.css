@@ -1,0 +1,130 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Kodas */
+
+body{
+    background-color: grey;
+  /* nav start */
+}
+header{
+    background: black;
+}
+header nav{
+    background: black;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    
+
+}
+header nav li{
+    display: inline-block;
+    font-size: 2rem;
+    border-right: 1px solid white;
+    /* padding-right: 10px; */
+}
+
+header nav li a{
+display: inline-block;
+text-decoration: none;
+color: white;
+padding: 10px;
+margin:10px;
+}
+
+/* nav end */
+/* content */
+section{
+   display: block;
+   font-size: 0;
+   margin-top:20px
+} 
+section>div{   
+background-color: white;
+margin:0 auto;
+width: 90%;
+font-size: 1rem;  
+margin-bottom: 50px;
+box-sizing: border-box;
+padding: 20px;
+
+}
+section>div:nth-child(2){  
+    background-color: red;
+    display: block;
+    font-size: 0;
+    
+    
+
+}
+section>div:nth-child(2)>div{
+    display: inline-block;
+    width: 50%;
+    background: yellow;
+    font-size: 1rem;
+    
+}
+section>div:nth-child(2)>div:nth-child(2){
+    background: yellowgreen;
+    width: 50%; /* no nesisery */
+    display: inline-block; /* no nesisery */
+    
+}
+/* content end */
+/* font start */
+h1{
+    font-size: 2rem;
+    font-weight: bold; 
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+}

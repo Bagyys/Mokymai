@@ -1,0 +1,125 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Kodas */
+body{
+    background: grey;
+}
+body>section{
+    display: block;
+    margin: 0 auto;
+    width: 60%; 
+    font-size: 0;
+
+}
+body>section>div{
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    width: 48%;
+    height: 55%; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin:1%;
+    margin-top: 20%;
+    
+    /* position: absolute; */ /* ?????? */
+}
+
+/* div styling start */
+body>section>div{
+    background-color: white;
+    border-radius: 5px;
+}
+/* div styling end */
+
+/* text styling */
+body>section>div>h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 5%;
+}
+/* h1 styling  start*/
+body>section>div:nth-child(1)>h1{
+color: tomato;}
+body>section>:nth-child(2)>h1{
+color:turquoise;
+}
+/* h1 styling end */
+body>section>div>h4{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 5%;
+}
+body>section>div>p{
+    font-size: 1rem;
+    margin-top: 10%;
+    color:lightgray
+}
+body>section>div>button{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 4% 5%;
+
+}
+/* button styling start */
+body>section>div:nth-child(1)>button{
+    background-color: tomato;
+    border-radius: 5px;
+    color:white;
+    font-size: 2rem;
+}
+body>section>:nth-child(2)>button{
+    background-color: turquoise;
+    border-radius: 5px;
+    color:white;
+    font-size: 2rem;
+}
+/* button styling end */
