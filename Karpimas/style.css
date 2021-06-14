@@ -1,0 +1,130 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+#a {
+  background-image: url(img/sectionA/bg.jpg);
+}
+
+.container1 {
+  display: block;
+  margin: 0 auto;
+  width: 62.5%;
+  font-size: 0;
+}
+.container1 header {
+  display: inline-block;
+  width: 100%;
+  margin-top: 2.4rem;
+}
+.container1 header h1 {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  width: 50%;
+}
+.container1 header nav {
+  display: inline-block;
+  width: 50%;
+}
+.container1 header nav ul :nth-child(6) {
+  margin-right: 4.9rem;
+}
+.container1 header nav ul :nth-child(7) {
+  margin-right: 0;
+}
+.container1 header nav ul a {
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  margin-right: 4.9rem;
+  text-decoration: none;
+}
+.container1 header nav ul :hover {
+  color: #fce38a;
+  -webkit-text-decoration: underline 0.3rem;
+          text-decoration: underline 0.3rem;
+  text-underline-offset: 0.8rem;
+}
+
+.info1 {
+  text-align: center;
+}
+.info1 h2 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  color: white;
+  font-size: 7.2rem;
+}
+.info1 h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 15rem;
+  color: white;
+  text-transform: uppercase;
+}
+.info1 img {
+  display: block;
+  margin: 0 auto;
+}
+.info1 button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.4rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin: 40px 160px;
+}/*# sourceMappingURL=style.css.map */

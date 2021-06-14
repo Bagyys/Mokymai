@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,59 +7,422 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: "";
+  content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* kodas */
 
-body>section{
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    font-size: 0;
-    margin-top: 100px;
-    border:1px solid black;
-} 
-body>section> p{
-    display: inline-block;
-    width: 33.33%;
-    font-size: 1rem;
-   float:left;
- 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-body>section> img{
-display: inline-block;
-width: 33.33%;
-font-size: 1rem;
+
+html {
+  font-size: 10px;
 }
+
+#a {
+  background-image: url(../Karpimas/img/sectionA/bg.jpg);
+}
+
+.container1 {
+  display: block;
+  margin: 0 auto;
+  width: 62.5%;
+  font-size: 0;
+}
+.container1 header {
+  display: inline-block;
+  width: 100%;
+  margin-top: 2.4rem;
+}
+.container1 header h1 {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  width: 50%;
+}
+.container1 header nav {
+  display: inline-block;
+  width: 50%;
+}
+.container1 header nav ul ::nth-child(6) {
+  margin-right: 4.9rem;
+}
+.container1 header nav ul :nth-child(7) {
+  margin-right: 0;
+}
+.container1 header nav ul a {
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  margin-right: 4.9rem;
+  text-decoration: none;
+}
+.container1 header nav ul :hover {
+  color: #fce38a;
+  -webkit-text-decoration: underline 0.3rem;
+          text-decoration: underline 0.3rem;
+  text-underline-offset: 0.8rem;
+}
+
+.info1 {
+  text-align: center;
+}
+.info1 h2 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  color: white;
+  font-size: 7.2rem;
+}
+.info1 h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 15rem;
+  color: white;
+  text-transform: uppercase;
+}
+.info1 img {
+  display: block;
+  margin: 0 auto;
+}
+.info1 button {
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  width: 16rem;
+  height: 4rem;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+}
+
+#b {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  width: 62.5%;
+}
+
+.b1 {
+  text-align: center;
+}
+.b1 h4 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-top: 9rem;
+}
+.b1 h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+}
+.b1 p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  margin-top: 4rem;
+}
+.b1 img {
+  margin-top: 3rem;
+}
+
+.b2 {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  margin-top: 10rem;
+  margin-bottom: 11rem;
+}
+
+.b3 {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  background: #95e1d3;
+}
+.b3 div {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20%;
+  border: 1px solid white;
+  border-top: none;
+  border-bottom: none;
+  text-align: center;
+}
+.b3 div h5 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 7.2rem;
+  color: white;
+  padding-top: 7.6rem;
+  margin-bottom: 0.4rem;
+}
+.b3 div p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 8.5rem;
+}
+
+#c {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  width: 62.5%;
+}
+
+.c1 {
+  text-align: center;
+}
+.c1 h4 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-top: 9rem;
+}
+.c1 h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+}
+.c1 p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  margin-top: 4rem;
+}
+.c1 img {
+  margin-top: 3rem;
+}
+
+.c2 {
+  display: inline-block;
+  width: 100%;
+  margin-top: 6.5rem;
+}
+.c2 div {
+  display: inline-block;
+  width: 33.33%;
+}
+.c2 div div {
+  display: inline-block;
+}
+.c2 h1 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+}
+.c2 p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: white;
+  display: inline-block;
+  width: 290px;
+  height: 81px;
+  margin-left: 55px;
+}
+.c2 img {
+  
+  margin-right: 20px;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+  margin-top: 4.8rem;
+}
+.c3 div {
+  display: inline-block;
+  width: 33.33%;
+}
+.c3 div div {
+  display: inline-block;
+}
+.c3 h1 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+}
+.c3 p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  display: inline-block;
+  width: 290px;
+  height: 81px;
+  margin-left: 55px;
+  margin-bottom: 8rem;
+}
+.c3 img {
+  
+  margin-right: 20px;
+}
+
+.d {
+  text-align: center;
+}
+.d h4 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+.d h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+}
+.d p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  margin-top: 4rem;
+}
+.d img {
+  margin-top: 3rem;
+}
+
+#d {
+  background-image: url(img/sectionD/bg1.jpg);
+  background-repeat: no-repeat;
+  padding-top: 10.9rem;
+  position: relative;
+}
+#d img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4.5rem;
+}
+
+.d1 {
+  position: absolute;
+  top: 50%;
+  right: 32%;
+}
+
+#f {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  width: 62.5%;
+}
+
+.f1 {
+  text-align: center;
+}
+.f1 h4 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-top: 9rem;
+}
+.f1 h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+}
+.f1 p {
+  display: inline-block;
+  width: 80%;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  margin-top: 4rem;
+}
+.f1 img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.f2 {
+  display: inline-block;
+  font-size: 0;
+  margin-bottom: 12rem;
+}
+.f2 div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+.f2 div div {
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid black;
+  align-items: center;
+}
+.f2 div div img {
+  display: inline-block;
+}
+.f2 div div h1 {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.f2 div div p {
+  display: inline-block;
+  width: 80%;
+}/*# sourceMappingURL=style.css.map */

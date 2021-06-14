@@ -1,0 +1,492 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+#a {
+  background-image: url(../Karpimas/img/sectionA/bg.jpg);
+}
+
+.container1 {
+  display: block;
+  margin: 0 auto;
+  width: 62.5%;
+  font-size: 0;
+}
+.container1 header {
+  display: inline-block;
+  width: 100%;
+  margin-top: 2.4rem;
+}
+.container1 header h1 {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  width: 50%;
+}
+.container1 header nav {
+  display: inline-block;
+  width: 50%;
+}
+.container1 header nav ul :nth-child(6) {
+  margin-right: 4.9rem;
+}
+.container1 header nav ul :nth-child(7) {
+  margin-right: 0;
+}
+.container1 header nav ul a {
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  margin-right: 4.9rem;
+  text-decoration: none;
+}
+.container1 header nav ul :hover {
+  color: #fce38a;
+  -webkit-text-decoration: underline 0.3rem;
+          text-decoration: underline 0.3rem;
+  text-underline-offset: 0.8rem;
+}
+
+.info1 {
+  text-align: center;
+}
+.info1 h2 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  color: white;
+  font-size: 7.2rem;
+  margin-top: 17.5rem;
+}
+.info1 h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 15rem;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 4.5rem;
+}
+.info1 img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+}
+.info1 button {
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  width: 16rem;
+  height: 4rem;
+  border: 3px solid white;
+  background-color: rgba(255, 0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+.line1 {
+  display: inline-block;
+  width: 25%;
+  margin-top: 15.5rem;
+}
+.line1 img {
+  margin-bottom: 2rem;
+}
+.line1 p {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+}
+.line1 h6 {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  margin-right: 0.5rem;
+}
+
+#b {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 0;
+}
+
+.info2 {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.info2 h2 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #333333;
+  margin-top: 6.5rem;
+}
+.info2 h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 1.3rem;
+  margin-bottom: 3.2rem;
+}
+.info2 p {
+  font-weight: "Roboto";
+  font-weight: 400;
+  color: #999999;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+}
+
+.photos2 {
+  display: block;
+  margin: 0 auto;
+  width: 62.5%;
+  margin-bottom: 11rem;
+}
+.photos2 :nth-child(2) {
+  margin: 0 2.9rem;
+}
+
+.numbers2 {
+  display: block;
+  margin: 0 auto;
+  background: #95e1d3;
+  font-size: 0;
+  width: 100%;
+}
+
+.bloc {
+  display: block;
+  width: 62.5%;
+  margin: 0 auto;
+}
+.bloc .containerNumber {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20%;
+  border: 1px solid white;
+  border-top: none;
+  border-bottom: none;
+  text-align: center;
+}
+.bloc .containerNumber h5 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 7.2rem;
+  color: white;
+  padding-top: 8rem;
+}
+.bloc .containerNumber p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 9rem;
+}
+
+#c {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  width: 62.5%;
+}
+
+.c1 {
+  text-align: center;
+}
+.c1 h4 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-top: 9rem;
+}
+.c1 h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+}
+.c1 p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  margin-top: 4rem;
+}
+.c1 img {
+  margin-top: 3rem;
+}
+
+.c2 {
+  display: inline-block;
+  width: 100%;
+  margin-top: 6.5rem;
+}
+.c2 div {
+  display: inline-block;
+  width: 33.33%;
+}
+.c2 div div {
+  display: inline-block;
+}
+.c2 h1 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+}
+.c2 p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  display: inline-block;
+  color: #999999;
+  width: 290px;
+  height: 81px;
+  margin-left: 55px;
+}
+.c2 img {
+  align: left;
+  margin-right: 20px;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+  margin-top: 4.8rem;
+}
+.c3 div {
+  display: inline-block;
+  width: 33.33%;
+}
+.c3 div div {
+  display: inline-block;
+}
+.c3 h1 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+}
+.c3 p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  display: inline-block;
+  width: 290px;
+  height: 81px;
+  margin-left: 55px;
+  margin-bottom: 8rem;
+}
+.c3 img {
+  align: left;
+  margin-right: 20px;
+}
+
+.d {
+  text-align: center;
+}
+.d h4 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+.d h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+}
+.d p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  margin-top: 4rem;
+}
+.d img {
+  margin-top: 3rem;
+}
+
+.container4 {
+  background-image: url(../Karpimas/img/sectionD/bg1.jpg);
+  background-repeat: no-repeat;
+  padding-top: 10.9rem;
+  position: relative;
+}
+.container4 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4.5rem;
+}
+
+.d1 {
+  position: absolute;
+  top: 50%;
+  right: 32%;
+}
+
+#f {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  width: 62.5%;
+}
+#f .info5 {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 11rem;
+}
+#f .info5 h4 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #333333;
+}
+#f .info5 h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  color: #333333;
+  margin-top: 1rem;
+  margin-bottom: 3.6rem;
+}
+#f .info5 p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+  margin-top: 4rem;
+  margin-bottom: 9rem;
+}
+
+.containerF {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+}
+.containerF img {
+  display: inline-block;
+}
+.containerF .textarea {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  margin-left: 2.5rem;
+  vertical-align: top;
+}
+.containerF .textarea textarea {
+  box-sizing: border-box;
+  height: 18rem;
+  width: 60rem;
+  scrollbar-face-color: red;
+}
+.containerF .textarea div {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  height: 6rem;
+  width: 60rem;
+  border: 1px solid grey;
+  box-sizing: border-box;
+}
+.containerF .textarea div img, .containerF .textarea div h5 {
+  display: inline-block;
+}
+.containerF .textarea div :nth-child(1) {
+  padding: 1.5rem;
+}
+.containerF .textarea div :nth-child(2) {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  text-transform: uppercase;
+  padding-bottom: 1100px;
+}
+.containerF .textarea div :nth-child(3) {
+  padding: 30px 15px 15px 15px;
+  float: right;
+}
+
+.margin {
+  margin-top: 1rem;
+}/*# sourceMappingURL=style.css.map */
