@@ -141,6 +141,12 @@ html {
   display: inline-block;
   width: 25%;
   margin-top: 15.5rem;
+  position: relative;
+}
+.line1:hover {
+  contect: "";
+  position: absolute;
+  background-color: red;
 }
 .line1 img {
   margin-bottom: 2rem;
@@ -206,6 +212,15 @@ html {
   margin: 0 auto;
   width: 62.5%;
   margin-bottom: 11rem;
+  /** img
+  * position: relative
+  * &:hover
+  * content: url(../Karpimas/img/sectionB/USERS.png)
+  * position: absolute
+  * top: 0
+  * bottom: 0
+  * left: 0
+  * right: 0 **/ 
 }
 .photos2 :nth-child(2) {
   margin: 0 2.9rem;
@@ -457,12 +472,6 @@ html {
 .containerF .textarea :nth-child(4) {
   margin-top: 1rem;
 }
-.containerF .textarea textarea {
-  box-sizing: border-box;
-  height: 18rem;
-  width: 60rem;
-  scrollbar-track-color: red;
-}
 .containerF .textarea div {
   font-family: "Montserrat";
   font-weight: 400;
@@ -492,6 +501,35 @@ html {
 .containerF .textarea img :nth-child(3), .containerF .textarea h5 :nth-child(3) {
   display: inline-block;
   padding: 25px 15px 15px 15px;
+}
+
+.texttrans {
+  box-sizing: border-box;
+  height: 18rem;
+  width: 60rem;
+  font-family: "Roboto";
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #999999;
+  padding: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.texttrans::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: whitesmoke;
+  padding-right: 2.5rem;
+  border: none;
+}
+
+.texttrans::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.texttrans::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #95e1d3;
+  height: 60%;
 }
 
 .margin {
@@ -1018,6 +1056,7 @@ html {
   font-size: 0;
   width: 100%;
   background-color: #f8f8f8;
+  padding-bottom: 7rem;
 }
 
 .containerN {
@@ -1031,20 +1070,21 @@ html {
   display: inline-block;
   width: 40%;
   box-sizing: border-box;
+  vertical-align: top;
+  margin-top: 7.5rem;
 }
 .infoN1 h1 {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 4.6rem;
   color: #cccccc;
-  margin-top: 7rem;
+  margin-bottom: 3.5rem;
 }
 .infoN1 p {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 1.5rem;
   color: #999999;
-  margin-top: 3rem;
   margin-bottom: 5rem;
 }
 .infoN1 h2 {
@@ -1083,6 +1123,7 @@ html {
   font-style: italic;
   font-size: 1.5rem;
   color: #cccccc;
+  padding: 2rem;
 }
 .infoN1 button {
   box-sizing: border-box;
@@ -1102,15 +1143,20 @@ html {
   width: 30%;
   box-sizing: border-box;
   vertical-align: bottom;
+  margin: 0 4.5rem;
+  margin-top: 8rem;
+  vertical-align: top;
 }
 .infoN2 div {
   display: inline-block;
   margin: 0 auto;
   font-size: 0;
   width: 100%;
+  box-sizing: border-box;
 }
 .infoN2 div img {
   display: inline-block;
+  box-sizing: border-box;
 }
 .infoN2 div h4 {
   display: inline-block;
@@ -1118,21 +1164,22 @@ html {
   font-weight: 400;
   font-size: 1.2rem;
   color: #333333;
+  box-sizing: border-box;
 }
 .infoN2 div h5 {
-  display: inline-block;
   font-family: "Roboto";
   font-style: 300;
   font-size: 1.3rem;
   color: #999999;
+  box-sizing: border-box;
 }
 .infoN2 h3 {
+  box-sizing: border-box;
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 1.4rem;
   color: #333333;
   text-transform: uppercase;
-  margin-top: 8rem;
   margin-bottom: 2.8rem;
 }
 .infoN2 :nth-child(3) {
@@ -1142,4 +1189,67 @@ html {
 .infoN3 {
   display: inline-block;
   width: 22.5%;
+  box-sizing: border-box;
+  margin-top: 7.5rem;
+  vertical-align: top;
+}
+.infoN3 h3 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 2.8rem;
+}
+.infoN3 h6 {
+  font-family: "Roboto";
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #333333;
+  margin-top: 1rem;
+}
+
+.infon2text {
+  display: inline-block;
+  width: 100%;
+}
+.infon2text img {
+  display: inline-block;
+}
+.infon2text div {
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
+  margin-left: 2rem;
+}
+.infon2text div h4 {
+  margin-top: 2rem;
+}
+.infon2text div h5 {
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #f8f8f8;
+}
+footer hr {
+  width: 62.5%;
+  margin: 0 auto;
+}
+
+.containerFooter {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  width: 62.5%;
+}
+.containerFooter h2 {
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 2rem 0;
+}
+.containerFooter h2 span {
+  color: #f38181;
 }/*# sourceMappingURL=style.css.map */

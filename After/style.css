@@ -1,0 +1,14 @@
+.container{
+  background-color: black;
+  height: 50vh;
+  display: block;
+  width: 62.5%;
+  position: relative;
+}
+.container img{
+ 
+}
+.container img:hover{
+  content: url(../Karpimas/img/sectionB/USERS.png);
+  position: absolute;
+}

@@ -141,6 +141,12 @@ html
     display: inline-block
     width: 25%
     margin-top: 15.5rem
+    position: relative
+    &:hover
+        contect: ''
+        position: absolute
+        background-color: red
+
     img
         margin-bottom: 2rem
     p
@@ -196,8 +202,20 @@ html
     margin: 0 auto
     width: 62.5%
     margin-bottom: 11rem
+
+    /** img
+     position: relative
+     &:hover
+     content: url(../Karpimas/img/sectionB/USERS.png)
+     position: absolute
+     top: 0
+     bottom: 0
+     left: 0
+     right: 0 **/ 
+
     :nth-child(2)
         margin: 0 2.9rem
+
 .numbers2
     display: block
     margin: 0 auto
@@ -413,12 +431,6 @@ html
             margin-top: 1rem
         :nth-child(4)
             margin-top: 1rem
-
-        textarea
-            box-sizing: border-box
-            height: 18rem
-            width: 60rem
-            scrollbar-track-color: red
         div
             font-family: $Mont
             font-weight: $reg
@@ -448,6 +460,30 @@ html
             :nth-child(3)
                 display: inline-block
                 padding: 25px 15px 15px 15px
+.texttrans
+    box-sizing: border-box
+    height: 18rem
+    width: 60rem
+    font-family: $Roboto
+    font-style: $italic
+    font-size: 1.5rem
+    color: $grey1
+    padding: 2rem
+    letter-spacing: 0.1rem
+
+.texttrans::-webkit-scrollbar-track
+    border-radius: 10px
+    box-shadow: rgb(245, 245, 245)
+    padding-right: 2.5rem
+    border: none
+
+.texttrans::-webkit-scrollbar
+    width: 0.5rem
+
+.texttrans::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background-color: $greenishh
+    height: 60%
 
 .margin
 
@@ -900,6 +936,7 @@ html
     font-size: 0
     width: 100%
     background-color: $grey
+    padding-bottom: 7rem
 .containerN
     display: block
     margin: 0 auto
@@ -909,18 +946,20 @@ html
     display: inline-block
     width: 40%
     box-sizing: border-box
+    vertical-align: top
+    margin-top: 7.5rem
     h1
         font-family: $Mont
         font-weight: $bold
         font-size: 4.6rem
         color: $logo
-        margin-top: 7rem
+        margin-bottom: 3.5rem
     p
         font-family: $Roboto
         font-weight: $reg
         font-size: 1.5rem
         color: $grey1
-        margin-top: 3rem
+
         margin-bottom: 5rem
 
     h2
@@ -948,11 +987,12 @@ html
         width: 23rem
         height: 4rem
         border: none
-        [placeholder]//????
+        [placeholder]//
             font-family: $Roboto
             font-style: $italic
             font-size: 1.5rem
             color: $logo
+            padding: 2rem
 
     button
         box-sizing: border-box
@@ -970,14 +1010,19 @@ html
     width: 30%
     box-sizing: border-box
     vertical-align: bottom
+    margin: 0 4.5rem
+    margin-top: 8rem
+    vertical-align: top
 
     div
         display: inline-block
         margin: 0 auto
         font-size: 0
         width: 100%
+        box-sizing: border-box
         img
             display: inline-block
+            box-sizing: border-box
 
         h4
             display: inline-block
@@ -985,22 +1030,77 @@ html
             font-weight: $reg
             font-size: 1.2rem
             color: $h1
+            box-sizing: border-box
         h5
-            display: inline-block
+
             font-family: $Roboto
             font-style: $light
             font-size: 1.3rem
             color: $grey1
+            box-sizing: border-box
     h3
+        box-sizing: border-box
         font-family: $Mont
         font-weight: $reg
         font-size: 1.4rem
         color: $h1
         text-transform: uppercase
-        margin-top: 8rem
         margin-bottom: 2.8rem
     :nth-child(3)
         margin: 3rem 0rem
 .infoN3
     display: inline-block
     width: 22.5%
+    box-sizing: border-box
+    margin-top: 7.5rem
+    vertical-align: top
+    h3
+        font-family: $Mont
+        font-weight: $reg
+        font-size: 1.4rem
+        color: $h1
+        text-transform: uppercase
+        margin-bottom: 2.8rem
+
+    img
+    h6
+        font-family: $Roboto
+        font-style: $italic
+        font-size: 1.3rem
+        color: $h1
+        margin-top: 1rem
+.infon2text
+    display: inline-block
+    width: 100%
+    img
+        display: inline-block
+
+    div
+        display: inline-block
+        width: 60%
+        vertical-align: top
+        margin-left: 2rem
+        h4
+            margin-top: 2rem
+        h5
+            margin-top: 1rem
+footer
+
+    background-color: $grey
+    hr
+        width: 62.5%
+        margin: 0 auto
+.containerFooter
+    display: block
+    margin: 0 auto
+    font-size: 0
+    width: 62.5%
+
+    h2
+        text-align: center
+        font-family: $Mont
+        font-weight: $reg
+        font-size: 1.4rem
+        padding: 2rem 0
+        span
+            color: rgb(243, 129, 129)
