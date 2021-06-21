@@ -53,6 +53,7 @@ $grey1: rgb(153, 153, 153)
 $h1: rgb(51, 51, 51)
 $hr: rgb(229,229,229)
 $logo: rgb(204, 204, 204 )
+$regishh: rgb(243,129,129)
 //font-family
 $Kaushan: 'Kaushan Script'
 $Mont: 'Montserrat'
@@ -69,10 +70,13 @@ html
 //secction a
 #a
     background-image: url(../Karpimas/img/sectionA/bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
 .container1
     display: block
     margin: 0 auto
     width: 62.5%
+    height: 100%
     font-size: 0
     header
         display: inline-block
@@ -142,11 +146,6 @@ html
     width: 25%
     margin-top: 15.5rem
     position: relative
-    &:hover
-        contect: ''
-        position: absolute
-        background-color: red
-
     img
         margin-bottom: 2rem
     p
@@ -165,6 +164,47 @@ html
         text-transform: uppercase
         margin-bottom: 2rem
         margin-right: 0.5rem
+.padding
+    width: 280px
+    height: 3px
+    background: rgb(248, 235, 197)
+    margin-bottom: 2rem
+.linered
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 3px
+        background-color: $regishh
+        transform: scaleX(0)
+        transform-origin: right
+        transition: transform 0.25s linear
+
+.linered
+    &:hover
+        &::after
+            transform: scaleX(1)
+            transform-origin: left
+
+    .container1
+        display: block
+        margin: 0 auto
+        width: 319
+        height: 567
+        font-size: 0
+        padding: 0
+        margin: 0
+
+        header
+            display: none
+        h2
+            display: none
+        h3
+            display: block
+            width: 100%
 //section a end
 //section b
 #b
@@ -197,32 +237,43 @@ html
         font-size: 1.5rem
         margin-top: 4rem
         margin-bottom: 10rem
-.photos2
+.photosContainer
     display: block
     margin: 0 auto
     width: 62.5%
     margin-bottom: 11rem
-
-    /** img
-     position: relative
-     &:hover
-     content: url(../Karpimas/img/sectionB/USERS.png)
-     position: absolute
-     top: 0
-     bottom: 0
-     left: 0
-     right: 0 **/ 
-
     :nth-child(2)
-        margin: 0 2.9rem
+        margin: 0 30px
 
+.image
+    position: relative
+    display: inline-block
+
+.image-img
+    display: block
+
+.overlay
+    position: absolute
+    top: -10px
+    left: -10px
+    width: 100%
+    height: 100%
+    background: linear-gradient(rgba(243,129,129,0.8), rgba(252,227,138, 0.8))
+    background-color: rgba(255,255,255, 0.5)
+    box-shadow: 10px 10px rgb(149, 225, 221)
+    opacity: 0
+    &:hover
+        opacity: 1
+    img
+        display: block
+        margin: 0 auto
+        padding-top: 25%
 .numbers2
     display: block
     margin: 0 auto
     background: $greenishh
     font-size: 0
     width: 100%
-
 .bloc
     display: block
     width: 62.5%
@@ -368,6 +419,8 @@ html
 
 .container4
     background-image: url(../Karpimas/img/sectionD/bg1.jpg)
+    background-position: center
+    background-size: cover
     background-repeat: no-repeat
     padding-top: 10.9rem
     position: relative
@@ -475,15 +528,17 @@ html
     border-radius: 10px
     box-shadow: rgb(245, 245, 245)
     padding-right: 2.5rem
-    border: none
+    outline: none
 
 .texttrans::-webkit-scrollbar
     width: 0.5rem
+    outline: none
 
 .texttrans::-webkit-scrollbar-thumb
     border-radius: 10px
     background-color: $greenishh
     height: 60%
+    outline: none
 
 .margin
 
@@ -578,12 +633,8 @@ html
     width: 62.5%
     margin: 0 auto
     text-align: center
-.infoH
-    display: block
-    margin: 0 auto
-    font-size: 0
-    width: 80%
-    margin-top: 10rem
+    :nth-child(3)
+        margin: 0 20px
     h4
         font-family: $Kaushan
         font-weight: $reg
@@ -596,35 +647,72 @@ html
         font-size: 3rem
         color: $h1
         text-transform: uppercase
-        margin-bottom: 3.7rem
-    img
-        margin-bottom: 4rem
+        margin-bottom: 3rem
+.infoH
+    display: block
+    margin: 0 auto
+    font-size: 0
+    width: 80%
+    margin-top: 10rem
+
+.portfolio
+    display: inline-block
+    margin-bottom: 9rem
+    h2
+        font-family: $Mont
+        font-weight: $reg
+        font-size: 1.4rem
+        color: $h1
+        text-transform: uppercase
+        margin-top: 3rem
     p
         font-family: $Roboto
         font-weight: $reg
         font-size: 1.5rem
         color: $grey1
-        margin-bottom: 9rem
-.img
-    display: block
-    margin: 0 auto
-    font-size: 0
+
+.teamMembers
+    display: inline-block
+    position: relative
+    box-sizing: border-box
+    margin-top: 9rem
+    img
+        display: block
+    h2
+        font-family: $Mont
+        font-weight: $reg
+        font-size: 1.4rem
+        color: $h1
+        text-transform: uppercase
+        margin-top: 3rem
+
+    p
+        font-size-adjust: $Roboto
+        font-style: $italic
+        font-size: 1.5rem
+        color: $grey1
+        margin-top: 1rem
+        margin-bottom: 12rem
+.teamOverlay
+    position: absolute
+    top: -10px
+    left: -10px
+    width: 100%
+    height: 100%
+    background: linear-gradient(rgba(243,129,129,0.8), rgba(252,227,138, 0.8))
+    background-color: rgba(255,255,255, 0.5)
+    box-shadow: 10px 10px rgb(149, 225, 221)
+    opacity: 0
+    &:hover
+        opacity: 1
+    img
+        display: block
+        margin: 0 auto
+        padding-top: 50%
+
     div
         display: inline-block
-        h5
-            font-family: $Mont
-            font-weight: $reg
-            font-size: 1.4rem
-            color: $h1
-            text-transform: uppercase
 
-        p
-            font-size-adjust: $Roboto
-            font-style: $italic
-            font-size: 1.5rem
-            color: $grey1
-            margin-top: 1rem
-            margin-bottom: 12rem
     :nth-child(2)
         margin: 0 3rem
         margin-top: 3rem
@@ -639,6 +727,10 @@ html
         display: block
         margin: 0 auto
         padding: 6rem 0
+        background-position: center
+        background-size: contain
+        width: 100%
+
 //section i end
 //section y
 #y
@@ -671,6 +763,7 @@ html
         margin-bottom: 3rem
     img
         margin-bottom: 4rem
+
     p
         font-family: $Mont
         font-weight: $reg
@@ -678,12 +771,38 @@ html
         color: $grey1
         margin-bottom: 10rem
 .photosY
-    display: inline-block
-    box-sizing: border-box
+    display: block
     width: 100%
-    div
-        display: inline-block
-        width: 25%
+    font-size: 0
+
+.blockStone
+    display: inline-block
+    width: 25%
+    font-size: 0
+.photosBox
+    position: relative
+.photos5
+    display: block
+.overlayBox
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(rgba(243,129,129,0.8), rgba(252,227,138, 0.8))
+    background-color: rgba(255,255,255, 0.5)
+    opacity: 0
+    &:hover
+        opacity: 1
+.photosHover
+    display: block
+    margin: 0 auto
+    margin-top: 35%
+.photosHover1
+    display: block
+    margin: 0 auto
+    margin-top: 80%
+
 //sectiom Y end
 //section j
 #j
@@ -746,6 +865,9 @@ html
 //section k
 #k
     background-image: url(../Karpimas/img/sectionK/Layer53.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
 .containerk
     display: block
     margin: 0 auto
@@ -930,6 +1052,17 @@ html
         padding-left: 2rem
 //section l end
 //section m 
+#m
+    display: block
+    margin: 0 auto
+    width: 100%
+.map
+    display: block
+    margin: 0 auto
+    background-position: center
+    background-size: contain
+    width: 100%
+
 #n
     display: block
     margin: 0 auto
@@ -1104,3 +1237,340 @@ footer
         padding: 2rem 0
         span
             color: rgb(243, 129, 129)
+
+    /** media queries **/
+@media all and ( max-width: 320px), (max-height: 568px)
+    #a //section a
+        margin: 0
+        padding: 0
+        width: 100vw
+        height: 100vh
+        background: linear-gradient(rgba(243,129,129,0.8), rgba(252,227,138, 0.8))
+        .container1
+            position: relative
+            width: 100%
+            header
+                h1
+                    display: none
+                img
+                    display: none
+                nav
+                    position: absolute
+                    top: 50%
+                    display: block
+                    margin: 0
+                    padding: 0
+                    width: 100%
+                    ul
+                        display: block
+                        margin: 0 auto
+                        padding: 0
+                        text-align: center
+                        width: 62.5%
+                        margin-top: 1rem
+                        a
+                            display: block
+                            box-sizing: border-box
+                            border: 3px solid $white
+                            margin: 0
+                            padding: 0
+                            width: 100%
+                            text-align: center
+                            padding: 1rem
+                            margin-top: 1rem
+                            &:hover
+                                background: $regishh
+                                color: $white
+                                text-decoration: none
+        .info1
+            margin: 0
+            padding: 0
+            h2
+                display: none
+            h3
+                font-size: 4rem
+                font-family: $Mont
+                font-weight: $bold
+            img
+                padding: 0
+                margin: 0 auto
+                margin-top: 1.5rem
+            button
+                margin: 0 auto
+                margin-top: 1rem
+
+        .line1
+            display: none
+    #b //section b
+        margin: 0
+        padding: 0
+        width: 100vw
+        height: 100vh
+        box-sizing: border-box
+        .info2
+            width: 90%
+            display: block
+            margin-top: 2rem
+            p
+                margin-bottom: 2rem
+            h2
+                margin-top: 1rem
+        .photosContainer
+            display: block
+            margin: 0
+            padding: 0
+            width: 100%
+
+            .image
+                margin: 1rem 0
+                padding: 0
+                display: block
+
+            img
+                margin: 0 auto
+                padding: 0
+                width: 75%
+            .nopicture
+                display: none
+            .overlay
+                display: none
+        .numbers2
+            width: 100%
+            padding: 0
+            margin: 0
+
+            .bloc
+                box-sizing: border-box
+                padding: 0
+                margin: 0
+                width: 100%
+                display: block
+                .containerNumber
+                    box-sizing: bo
+                    text-align: center
+                    width: 20%
+                    margin: 0 auto
+                    padding: 0
+                    border: none
+                    border-right: 1px solid white
+                    vertical-align: top
+                    padding: 0
+                    &:last-child
+                        border: none
+                    h5
+                        font-size: 2rem
+                        padding-top: 2rem
+                        box-sizing: border-box
+
+                    p
+                        font-size: 1rem
+                        padding-bottom: 1rem
+                        text-align: center
+                        padding-top: 1rem
+                        box-sizing: border-box
+    #c //section c
+        display: block
+        margin: 0 auto
+
+        width: 100vw
+    .container3
+        .c1
+            display: block
+            margin: 0 auto
+            width: 90%
+            h4
+                margin-top: 1rem
+        .c2
+            display: block
+            margin-top: 5rem
+            width: 90%
+            margin: 0 auto
+            box-sizing: border-box
+            text-align: center
+            img
+                margin: 0
+                padding: 0
+                box-sizing: border-box
+            h1
+                font-size: 1rem
+                margin-top: 1rem
+            div
+                display: inline-block
+                width: 30%
+                box-sizing: border-box
+                margin: 2rem 0
+
+                p
+                    display: inline-block
+                    font-size: 1rem
+                    width: 90%
+                    margin: 1rem auto
+                    height: 0
+        .c3
+            display: block
+            margin-top: 5rem
+            width: 90%
+            margin: 0 auto
+            box-sizing: border-box
+            text-align: center
+            img
+                margin: 0
+                padding: 0
+                box-sizing: border-box
+            h1
+                font-size: 1rem
+                margin-top: 1rem
+                display: block
+            div
+                display: inline-block
+                width: 30%
+                box-sizing: border-box
+                margin: 2rem 0
+
+                p
+                    display: inline-block
+                    font-size: 1rem
+                    width: 90%
+                    margin: 1rem auto
+                    height: 0
+    #d //section d
+        display: block
+
+        margin: 0 auto
+        .container4
+            padding-top: 3rem
+        .d11
+            width: 100%
+
+        .d1
+            width: 50%
+            height: 50%
+    #f //sectionf
+        display: block
+        margin: 0 auto
+        width: 90%
+
+        .info5
+            display: block
+            margin: 0 auto
+            width: 90%
+            h2
+                margin-top: 5rem
+            p
+                margin-bottom: 3rem
+        .containerF
+            display: block
+            width: 90%
+            .imgimg
+                display: block
+                width: 90%
+                margin: 0 auto
+                margin-bottom: 1rem
+            .textarea
+                display: block
+                margin: 0 auto
+                width: 90%
+                box-sizing: border-box
+                .margin
+                    width: 100%
+
+                textarea
+                    width: 100%
+    #g //section g
+        display: block
+        width: 100%
+        margin: 0 auto
+        .containerG
+            display: block
+            width: 100%
+            margin: 1rem auto
+        :nth-child(3)
+            display: block
+            text-align: center
+            font-size: 1rem
+
+        .g1
+            display: none
+        .g4
+            display: none
+    #h //section h
+        display: block
+        width: 90%
+        margin: 0 auto
+        .containerH
+        :nth-child(3)
+            margin: 0
+        .infoH
+            display: block
+            margin: 0 auto
+            h4
+                width: 100%
+            h2
+                width: 100%
+        .portfolio
+            display: block
+            width: 100%
+            margin-bottom: 0rem
+            .teamMembers
+                display: block
+                width: 100%
+                margin-top: 3rem
+                .member-img
+                    display: block
+                    box-sizing: border-box
+                    width: 100%
+
+            img
+                width: 100%
+    #i //section i
+        display: block
+        width: 100%
+        margin-top: 2rem
+        img
+            width: 90%
+    #y
+        display: block
+        width: 100%
+        margin: 0 auto
+        .containerY
+            .infoY
+                display: block
+                width: 90%
+
+            .photosY
+                widows: 100%
+                .blockStone
+                    display: block
+                    width: 90%
+                    margin: 0 auto
+                    .photosBox
+                        display: block
+                        width: 100%
+                        margin-top: 2rem
+                        .photos5
+                            display: block
+                            width: 100%
+    #j //section j
+        display: block
+        width: 100%
+        margin: 0 auto
+    .containerj
+        display: block
+        width: 100%
+        margin: 1rem auto
+        :nth-child(3)
+            display: block
+            text-align: center
+            font-size: 1rem
+            margin: 0 auto
+            width: 90%
+        .infoj
+            display: block
+            margin: 0 auto
+        .j1
+            display: none
+        .j2
+            display: block
+            margin: 0 auto
+        .j4
+            display: none

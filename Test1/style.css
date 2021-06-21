@@ -54,12 +54,15 @@ html {
 
 #a {
   background-image: url(../Karpimas/img/sectionA/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container1 {
   display: block;
   margin: 0 auto;
   width: 62.5%;
+  height: 100%;
   font-size: 0;
 }
 .container1 header {
@@ -143,11 +146,6 @@ html {
   margin-top: 15.5rem;
   position: relative;
 }
-.line1:hover {
-  contect: "";
-  position: absolute;
-  background-color: red;
-}
 .line1 img {
   margin-bottom: 2rem;
 }
@@ -168,6 +166,53 @@ html {
   text-transform: uppercase;
   margin-bottom: 2rem;
   margin-right: 0.5rem;
+}
+
+.padding {
+  width: 280px;
+  height: 3px;
+  background: #f8ebc5;
+  margin-bottom: 2rem;
+}
+
+.linered {
+  position: relative;
+}
+.linered::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f38181;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s linear;
+}
+
+.linered:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.linered .container1 {
+  display: block;
+  margin: 0 auto;
+  width: 319;
+  height: 567;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+}
+.linered .container1 header {
+  display: none;
+}
+.linered .container1 h2 {
+  display: none;
+}
+.linered .container1 h3 {
+  display: block;
+  width: 100%;
 }
 
 #b {
@@ -207,23 +252,43 @@ html {
   margin-bottom: 10rem;
 }
 
-.photos2 {
+.photosContainer {
   display: block;
   margin: 0 auto;
   width: 62.5%;
   margin-bottom: 11rem;
-  /** img
-  * position: relative
-  * &:hover
-  * content: url(../Karpimas/img/sectionB/USERS.png)
-  * position: absolute
-  * top: 0
-  * bottom: 0
-  * left: 0
-  * right: 0 **/ 
 }
-.photos2 :nth-child(2) {
-  margin: 0 2.9rem;
+.photosContainer :nth-child(2) {
+  margin: 0 30px;
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+}
+
+.image-img {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8));
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 10px 10px #95e1dd;
+  opacity: 0;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.overlay img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 25%;
 }
 
 .numbers2 {
@@ -398,6 +463,8 @@ html {
 
 .container4 {
   background-image: url(../Karpimas/img/sectionD/bg1.jpg);
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   padding-top: 10.9rem;
   position: relative;
@@ -519,17 +586,19 @@ html {
   border-radius: 10px;
   box-shadow: whitesmoke;
   padding-right: 2.5rem;
-  border: none;
+  outline: none;
 }
 
 .texttrans::-webkit-scrollbar {
   width: 0.5rem;
+  outline: none;
 }
 
 .texttrans::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #95e1d3;
   height: 60%;
+  outline: none;
 }
 
 .margin {
@@ -637,6 +706,24 @@ html {
   margin: 0 auto;
   text-align: center;
 }
+.containerH :nth-child(3) {
+  margin: 0 20px;
+}
+.containerH h4 {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.containerH h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 3rem;
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
 
 .infoH {
   display: block;
@@ -645,48 +732,44 @@ html {
   width: 80%;
   margin-top: 10rem;
 }
-.infoH h4 {
-  font-family: "Kaushan Script";
-  font-weight: 400;
-  font-size: 2.4rem;
-  color: #333333;
-  margin-bottom: 1rem;
-}
-.infoH h2 {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 3rem;
-  color: #333333;
-  text-transform: uppercase;
-  margin-bottom: 3.7rem;
-}
-.infoH img {
-  margin-bottom: 4rem;
-}
-.infoH p {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #999999;
+
+.portfolio {
+  display: inline-block;
   margin-bottom: 9rem;
 }
-
-.img {
-  display: block;
-  margin: 0 auto;
-  font-size: 0;
-}
-.img div {
-  display: inline-block;
-}
-.img div h5 {
+.portfolio h2 {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 1.4rem;
   color: #333333;
   text-transform: uppercase;
+  margin-top: 3rem;
 }
-.img div p {
+.portfolio p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #999999;
+}
+
+.teamMembers {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 9rem;
+}
+.teamMembers img {
+  display: block;
+}
+.teamMembers h2 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+.teamMembers p {
   font-size-adjust: "Roboto";
   font-style: italic;
   font-size: 1.5rem;
@@ -694,7 +777,30 @@ html {
   margin-top: 1rem;
   margin-bottom: 12rem;
 }
-.img :nth-child(2) {
+
+.teamOverlay {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8));
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 10px 10px #95e1dd;
+  opacity: 0;
+}
+.teamOverlay:hover {
+  opacity: 1;
+}
+.teamOverlay img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 50%;
+}
+.teamOverlay div {
+  display: inline-block;
+}
+.teamOverlay :nth-child(2) {
   margin: 0 3rem;
   margin-top: 3rem;
 }
@@ -708,6 +814,9 @@ html {
   display: block;
   margin: 0 auto;
   padding: 6rem 0;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
 }
 
 #y {
@@ -757,13 +866,49 @@ html {
 }
 
 .photosY {
-  display: inline-block;
-  box-sizing: border-box;
+  display: block;
   width: 100%;
+  font-size: 0;
 }
-.photosY div {
+
+.blockStone {
   display: inline-block;
   width: 25%;
+  font-size: 0;
+}
+
+.photosBox {
+  position: relative;
+}
+
+.photos5 {
+  display: block;
+}
+
+.overlayBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8));
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+}
+.overlayBox:hover {
+  opacity: 1;
+}
+
+.photosHover {
+  display: block;
+  margin: 0 auto;
+  margin-top: 35%;
+}
+
+.photosHover1 {
+  display: block;
+  margin: 0 auto;
+  margin-top: 80%;
 }
 
 #j {
@@ -835,6 +980,9 @@ html {
 
 #k {
   background-image: url(../Karpimas/img/sectionK/Layer53.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .containerk {
@@ -1050,6 +1198,20 @@ html {
   padding-left: 2rem;
 }
 
+#m {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.map {
+  display: block;
+  margin: 0 auto;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+}
+
 #n {
   display: block;
   margin: 0 auto;
@@ -1242,6 +1404,7 @@ footer hr {
   margin: 0 auto;
   font-size: 0;
   width: 62.5%;
+  /** media queries **/
 }
 .containerFooter h2 {
   text-align: center;
@@ -1252,4 +1415,417 @@ footer hr {
 }
 .containerFooter h2 span {
   color: #f38181;
+}
+
+@media all and (max-width: 320px), (max-height: 568px) {
+  #a {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8));
+  }
+  #a .container1 {
+    position: relative;
+    width: 100%;
+  }
+  #a .container1 header h1 {
+    display: none;
+  }
+  #a .container1 header img {
+    display: none;
+  }
+  #a .container1 header nav {
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #a .container1 header nav ul {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 62.5%;
+    margin-top: 1rem;
+  }
+  #a .container1 header nav ul a {
+    display: block;
+    box-sizing: border-box;
+    border: 3px solid white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  #a .container1 header nav ul a:hover {
+    background: #f38181;
+    color: white;
+    text-decoration: none;
+  }
+  #a .info1 {
+    margin: 0;
+    padding: 0;
+  }
+  #a .info1 h2 {
+    display: none;
+  }
+  #a .info1 h3 {
+    font-size: 4rem;
+    font-family: "Montserrat";
+    font-weight: 700;
+  }
+  #a .info1 img {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+  #a .info1 button {
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  #a .line1 {
+    display: none;
+  }
+
+  #b {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  #b .info2 {
+    width: 90%;
+    display: block;
+    margin-top: 2rem;
+  }
+  #b .info2 p {
+    margin-bottom: 2rem;
+  }
+  #b .info2 h2 {
+    margin-top: 1rem;
+  }
+  #b .photosContainer {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #b .photosContainer .image {
+    margin: 1rem 0;
+    padding: 0;
+    display: block;
+  }
+  #b .photosContainer img {
+    margin: 0 auto;
+    padding: 0;
+    width: 75%;
+  }
+  #b .photosContainer .nopicture {
+    display: none;
+  }
+  #b .photosContainer .overlay {
+    display: none;
+  }
+  #b .numbers2 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  #b .numbers2 .bloc {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
+  #b .numbers2 .bloc .containerNumber {
+    box-sizing: bo;
+    text-align: center;
+    width: 20%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-right: 1px solid white;
+    vertical-align: top;
+    padding: 0;
+  }
+  #b .numbers2 .bloc .containerNumber:last-child {
+    border: none;
+  }
+  #b .numbers2 .bloc .containerNumber h5 {
+    font-size: 2rem;
+    padding-top: 2rem;
+    box-sizing: border-box;
+  }
+  #b .numbers2 .bloc .containerNumber p {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    padding-top: 1rem;
+    box-sizing: border-box;
+  }
+
+  #c {
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  .container3 .c1 {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .container3 .c1 h4 {
+    margin-top: 1rem;
+  }
+  .container3 .c2 {
+    display: block;
+    margin-top: 5rem;
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .container3 .c2 img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container3 .c2 h1 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .container3 .c2 div {
+    display: inline-block;
+    width: 30%;
+    box-sizing: border-box;
+    margin: 2rem 0;
+  }
+  .container3 .c2 div p {
+    display: inline-block;
+    font-size: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+    height: 0;
+  }
+  .container3 .c3 {
+    display: block;
+    margin-top: 5rem;
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .container3 .c3 img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container3 .c3 h1 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: block;
+  }
+  .container3 .c3 div {
+    display: inline-block;
+    width: 30%;
+    box-sizing: border-box;
+    margin: 2rem 0;
+  }
+  .container3 .c3 div p {
+    display: inline-block;
+    font-size: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+    height: 0;
+  }
+
+  #d {
+    display: block;
+    margin: 0 auto;
+  }
+  #d .container4 {
+    padding-top: 3rem;
+  }
+  #d .d11 {
+    width: 100%;
+  }
+  #d .d1 {
+    width: 50%;
+    height: 50%;
+  }
+
+  #f {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+  #f .info5 {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+  #f .info5 h2 {
+    margin-top: 5rem;
+  }
+  #f .info5 p {
+    margin-bottom: 3rem;
+  }
+  #f .containerF {
+    display: block;
+    width: 90%;
+  }
+  #f .containerF .imgimg {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  #f .containerF .textarea {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    box-sizing: border-box;
+  }
+  #f .containerF .textarea .margin {
+    width: 100%;
+  }
+  #f .containerF .textarea textarea {
+    width: 100%;
+  }
+
+  #g {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #g .containerG {
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
+  }
+  #g :nth-child(3) {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+  }
+  #g .g1 {
+    display: none;
+  }
+  #g .g4 {
+    display: none;
+  }
+
+  #h {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #h :nth-child(3) {
+    margin: 0;
+  }
+  #h .infoH {
+    display: block;
+    margin: 0 auto;
+  }
+  #h .infoH h4 {
+    width: 100%;
+  }
+  #h .infoH h2 {
+    width: 100%;
+  }
+  #h .portfolio {
+    display: block;
+    width: 100%;
+    margin-bottom: 0rem;
+  }
+  #h .portfolio .teamMembers {
+    display: block;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  #h .portfolio .teamMembers .member-img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #h .portfolio img {
+    width: 100%;
+  }
+
+  #i {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  #i img {
+    width: 90%;
+  }
+
+  #y {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #y .containerY .infoY {
+    display: block;
+    width: 90%;
+  }
+  #y .containerY .photosY {
+    widows: 100%;
+  }
+  #y .containerY .photosY .blockStone {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #y .containerY .photosY .blockStone .photosBox {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  #y .containerY .photosY .blockStone .photosBox .photos5 {
+    display: block;
+    width: 100%;
+  }
+
+  #j {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .containerj {
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
+  }
+  .containerj :nth-child(3) {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .containerj .infoj {
+    display: block;
+    margin: 0 auto;
+  }
+  .containerj .j1 {
+    display: none;
+  }
+  .containerj .j2 {
+    display: block;
+    margin: 0 auto;
+  }
+  .containerj .j4 {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

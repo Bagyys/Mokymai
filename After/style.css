@@ -1,14 +1,109 @@
-.container{
-  background-color: black;
-  height: 50vh;
-  display: block;
-  width: 62.5%;
+.content{
+  height: 100%;
+  width: 100%;
+  background: yellow;
+}
+.content h1{
+  font-size: 2rem;
+  background: seagreen;
+  color:white;
+}
+.fancy-link{
+  font-size: 3rem;
+  background-color: violet;
+  color: white;
+  text-decoration: none;
   position: relative;
 }
-.container img{
+
+.fancy-link::after{
+  content:'';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: seagreen;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1s linear;
+}
+.fancy-link:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+/* img hover */
+.image{
+  position:relative;
+ display: inline-block;
+
+}
+.block{
+  display: block;
+  width: 50%;
+  margin: o auto;
+  font-size: 0;
+}
+
+.image-img{
+  display: block;
  
 }
-.container img:hover{
-  content: url(../Karpimas/img/sectionB/USERS.png);
+.overlay{
   position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(243,129,129,0.8), rgba(252,227,138, 0.8));
+  background-color: rgba(255,255,255, 0.5);
+  box-shadow: 10px 10px rgb(149, 225, 221); 
+  opacity: 0;
+}
+.overlay:hover{
+  opacity: 1;
+}
+.overlay img{
+  display: block;
+  margin: 0 auto;
+  padding-top: 25%;
+}
+/* hover img start agian */
+.photosY{
+  display: block;
+  width: 100%;
+  font-size: 0;
+}
+.block12345{
+  display: inline-block;
+  width: 25%;
+  font-size: 0;
+ 
+}
+.box{
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.overlayHover{
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(243,129,129,0.8), rgba(252,227,138, 0.8));
+  background-color: rgba(255,255,255, 0.5);
+
+  opacity: 0;
+}
+.hoverme{
+  display: block;
+}
+.hoverme1{
+  display: block;
+  margin: 0 auto;
+  margin-top: 30%;
+}
+.overlayHover:hover{
+  opacity: 1;
 }
