@@ -82,21 +82,27 @@ html
         display: inline-block
         width: 100%
         margin-top: 2.4rem
-        h1
-            display: inline-block
-            font-family: $Mont
-            font-size: 3rem
-            font-weight: $bold
-            color: $white
-            width: 50%
+        text-align: right
+        position: relative
+
+        .mogologo
+            position: absolute
+            top: 0
+            left: 0
         nav
             display: inline-block
-            width: 50%
+
             ul
+                display: inline-block
+                max-width: 100%
                 :nth-child(6)
+                    display: inline-block
+                    max-width: 100%
                     margin-right: 4.9rem
                 :nth-child(7)
                     margin-right: 0
+                    display: inline-block
+                    max-width: 100%
                 a
                     font-family: $Mont
                     font-size: 1.4rem
@@ -104,6 +110,7 @@ html
                     text-transform: uppercase
                     margin-right: 4.9rem
                     text-decoration: none
+                    max-width: 100%
                 :hover
                     color: $yellow
                     text-decoration: underline 0.3rem
@@ -243,14 +250,15 @@ html
     width: 62.5%
     margin-bottom: 11rem
     :nth-child(2)
-        margin: 0 30px
+        margin: 0 2rem
 
 .image
     position: relative
     display: inline-block
+    max-width: 100%
 
 .image-img
-    display: block
+    display: inline-block
 
 .overlay
     position: absolute
@@ -439,7 +447,11 @@ html
     display: block
     margin: 0 auto
     font-size: 0
-    width: 62.5%
+    width: 100%
+    .container5
+        display: block
+        margin: 0 auto
+        width: 62.5%
     .info5
         display: block
         width: 50%
@@ -470,16 +482,22 @@ html
     display: block
     margin: 0 auto
     font-size: 0
-    img
+    box-sizing: border-box
+    vertical-align: top
+    width: 100%
+    margin-bottom: 12rem
+    .imgimg
         display: inline-block
+        max-width: 100%
+        margin-right: 3rem
 
     .textarea
         display: inline-block
-        width: 50%
-        margin-bottom: 12rem
-
-        margin-left: 2.5rem
+        width: -0
         vertical-align: top
+        box-sizing: border-box
+        margin: 0 auto
+        max-width: 100%
         :nth-child(3)
             margin-top: 1rem
         :nth-child(4)
@@ -722,14 +740,12 @@ html
     display: block
     margin: 0 auto
     background-color: $grey
-
     img
         display: block
         margin: 0 auto
         padding: 6rem 0
         background-position: center
         background-size: contain
-        width: 100%
 
 //section i end
 //section y
@@ -783,6 +799,7 @@ html
     position: relative
 .photos5
     display: block
+    max-width: 100%
 .overlayBox
     position: absolute
     left: 0
@@ -1062,7 +1079,7 @@ html
     background-position: center
     background-size: contain
     width: 100%
-
+//section n
 #n
     display: block
     margin: 0 auto
@@ -1077,7 +1094,7 @@ html
     width: 62.5%
 .infoN1
     display: inline-block
-    width: 40%
+    max-width: 40%
     box-sizing: border-box
     vertical-align: top
     margin-top: 7.5rem
@@ -1140,10 +1157,10 @@ html
         text-transform: uppercase
 .infoN2
     display: inline-block
-    width: 30%
+    max-width: 30%
     box-sizing: border-box
     vertical-align: bottom
-    margin: 0 4.5rem
+    margin: 0 4rem
     margin-top: 8rem
     vertical-align: top
 
@@ -1151,7 +1168,6 @@ html
         display: inline-block
         margin: 0 auto
         font-size: 0
-        width: 100%
         box-sizing: border-box
         img
             display: inline-block
@@ -1183,7 +1199,7 @@ html
         margin: 3rem 0rem
 .infoN3
     display: inline-block
-    width: 22.5%
+    max-width: 22.5%
     box-sizing: border-box
     margin-top: 7.5rem
     vertical-align: top
@@ -1196,6 +1212,7 @@ html
         margin-bottom: 2.8rem
 
     img
+        max-width: 100%
     h6
         font-family: $Roboto
         font-style: $italic
@@ -1238,339 +1255,561 @@ footer
         span
             color: rgb(243, 129, 129)
 
-    /** media queries **/
-@media all and ( max-width: 320px), (max-height: 568px)
-    #a //section a
-        margin: 0
-        padding: 0
-        width: 100vw
-        height: 100vh
-        background: linear-gradient(rgba(243,129,129,0.8), rgba(252,227,138, 0.8))
-        .container1
-            position: relative
-            width: 100%
-            header
-                h1
-                    display: none
-                img
-                    display: none
-                nav
-                    position: absolute
-                    top: 50%
-                    display: block
-                    margin: 0
-                    padding: 0
-                    width: 100%
-                    ul
-                        display: block
-                        margin: 0 auto
-                        padding: 0
-                        text-align: center
-                        width: 62.5%
-                        margin-top: 1rem
-                        a
-                            display: block
-                            box-sizing: border-box
-                            border: 3px solid $white
-                            margin: 0
-                            padding: 0
-                            width: 100%
-                            text-align: center
-                            padding: 1rem
-                            margin-top: 1rem
-                            &:hover
-                                background: $regishh
-                                color: $white
-                                text-decoration: none
-        .info1
-            margin: 0
-            padding: 0
-            h2
-                display: none
-            h3
-                font-size: 4rem
-                font-family: $Mont
-                font-weight: $bold
-            img
-                padding: 0
-                margin: 0 auto
-                margin-top: 1.5rem
-            button
-                margin: 0 auto
-                margin-top: 1rem
+/** media queris  **/
+@media all and ( max-width: 1024px )
+    #a
+        display: block
+        margin: 0 auto
+        max-width: 100%
+        background-position: center
 
-        .line1
-            display: none
-    #b //section b
-        margin: 0
-        padding: 0
-        width: 100vw
-        height: 100vh
+        padding-top: 5rem
         box-sizing: border-box
-        .info2
-            width: 90%
+        object-fit: cover
+
+        .container1
             display: block
-            margin-top: 2rem
-            p
-                margin-bottom: 2rem
-            h2
-                margin-top: 1rem
+            margin: 0 auto
+            width: 90%
+            header
+                display: block
+                width: 100%
+                margin: 0 auto
+            .info1
+                h3
+                    font-size: 10rem
+            div
+                .line1
+                    .padding
+                        width: 80%
+
+    #b
         .photosContainer
             display: block
-            margin: 0
-            padding: 0
-            width: 100%
-
+            width: 62.5%
+            margin: 0 auto
+            :nth-child(2)
+                margin: 3rem 0
             .image
-                margin: 1rem 0
-                padding: 0
                 display: block
-
-            img
                 margin: 0 auto
-                padding: 0
-                width: 75%
-            .nopicture
-                display: none
-            .overlay
-                display: none
+                font-size: 0
+                max-width: 59.5%
+                img
+                    margin: 2rem auto
+                    display: block
+                .overlay
+                    width: 100%
+                    top: -30px
+                    left: 0
+
         .numbers2
-            width: 100%
-            padding: 0
-            margin: 0
-
             .bloc
-                box-sizing: border-box
-                padding: 0
-                margin: 0
-                width: 100%
-                display: block
-                .containerNumber
-                    box-sizing: bo
-                    text-align: center
-                    width: 20%
-                    margin: 0 auto
-                    padding: 0
-                    border: none
-                    border-right: 1px solid white
+            :nth-child(2)
+                h5
+                    margin-bottom: 1.5rem
+            :nth-child(4)
+                h5
+                    margin-bottom: 1.5rem
+            :nth-child(5)
+                h5
+                    margin-bottom: 1.5rem
+                .containerNumer
                     vertical-align: top
-                    padding: 0
-                    &:last-child
-                        border: none
-                    h5
-                        font-size: 2rem
-                        padding-top: 2rem
-                        box-sizing: border-box
-
+    #c
+        display: block
+        margin: 0 auto
+        width: 62.5%
+        .container3
+            display: block
+            margin: 0 auto
+            width: 100%
+            .c2
+                div
                     p
-                        font-size: 1rem
-                        padding-bottom: 1rem
-                        text-align: center
-                        padding-top: 1rem
-                        box-sizing: border-box
-    #c //section c
-        display: block
-        margin: 0 auto
-
-        width: 100vw
-    .container3
-        .c1
-            display: block
-            margin: 0 auto
-            width: 90%
-            h4
-                margin-top: 1rem
-        .c2
-            display: block
-            margin-top: 5rem
-            width: 90%
-            margin: 0 auto
-            box-sizing: border-box
-            text-align: center
-            img
-                margin: 0
-                padding: 0
-                box-sizing: border-box
-            h1
-                font-size: 1rem
-                margin-top: 1rem
-            div
-                display: inline-block
-                width: 30%
-                box-sizing: border-box
+                        width: 60%
+                        margin-bottom: 8rem
+            hr
                 margin: 2rem 0
-
-                p
-                    display: inline-block
-                    font-size: 1rem
-                    width: 90%
-                    margin: 1rem auto
-                    height: 0
-        .c3
-            display: block
-            margin-top: 5rem
-            width: 90%
-            margin: 0 auto
-            box-sizing: border-box
-            text-align: center
-            img
-                margin: 0
-                padding: 0
-                box-sizing: border-box
-            h1
-                font-size: 1rem
-                margin-top: 1rem
-                display: block
-            div
-                display: inline-block
-                width: 30%
-                box-sizing: border-box
-                margin: 2rem 0
-
-                p
-                    display: inline-block
-                    font-size: 1rem
-                    width: 90%
-                    margin: 1rem auto
-                    height: 0
-    #d //section d
-        display: block
-
-        margin: 0 auto
-        .container4
-            padding-top: 3rem
-        .d11
-            width: 100%
-
-        .d1
-            width: 50%
-            height: 50%
-    #f //sectionf
-        display: block
-        margin: 0 auto
-        width: 90%
-
-        .info5
-            display: block
-            margin: 0 auto
-            width: 90%
-            h2
-                margin-top: 5rem
-            p
-                margin-bottom: 3rem
-        .containerF
-            display: block
-            width: 90%
-            .imgimg
-                display: block
-                width: 90%
-                margin: 0 auto
-                margin-bottom: 1rem
-            .textarea
-                display: block
-                margin: 0 auto
-                width: 90%
-                box-sizing: border-box
-                .margin
-                    width: 100%
-
-                textarea
-                    width: 100%
-    #g //section g
-        display: block
-        width: 100%
-        margin: 0 auto
-        .containerG
-            display: block
-            width: 100%
-            margin: 1rem auto
-        :nth-child(3)
-            display: block
-            text-align: center
-            font-size: 1rem
-
-        .g1
-            display: none
-        .g4
-            display: none
-    #h //section h
-        display: block
-        width: 90%
-        margin: 0 auto
-        .containerH
-        :nth-child(3)
-            margin: 0
-        .infoH
-            display: block
-            margin: 0 auto
-            h4
-                width: 100%
-            h2
-                width: 100%
-        .portfolio
-            display: block
-            width: 100%
-            margin-bottom: 0rem
-            .teamMembers
-                display: block
-                width: 100%
-                margin-top: 3rem
-                .member-img
+            .c3
+                div
+                    p
+                        width: 60%
+    #f
+        .container5
+            .containerF
+                .imgimg
                     display: block
-                    box-sizing: border-box
-                    width: 100%
-
-            img
-                width: 100%
-    #i //section i
-        display: block
-        width: 100%
-        margin-top: 2rem
-        img
-            width: 90%
-    #y
-        display: block
-        width: 100%
-        margin: 0 auto
-        .containerY
-            .infoY
-                display: block
-                width: 90%
-
-            .photosY
-                widows: 100%
-                .blockStone
-                    display: block
-                    width: 90%
                     margin: 0 auto
-                    .photosBox
+                    margin-bottom: 2rem
+                .textarea
+                    display: block
+                    margin: 0 auto
+                    width: 100%
+                    .margin
                         display: block
-                        width: 100%
-                        margin-top: 2rem
-                        .photos5
-                            display: block
-                            width: 100%
-    #j //section j
+                        margin: 0 auto
+
+                    .texttrans
+                        display: block
+                        margin: 0 auto
+    #g
+        .containerG
+            .info6
+                display: inline-block
+                margin: 0 auto
+                .g2
+                    display: inline-block
+                    margin-right: 9rem
+                    margin-left: 0
+                div
+                    max-width: 40%
+                    display: inline-block
+                    margin-left: 3rem
+
+    #i
+        img
+            max-width: 100%
+    #j
+        .containerj
+            .infoj
+                display: inline-block
+                margin: 0 auto
+                .j2
+                    display: inline-block
+                    margin-right: 3rem
+                    margin-left: 0
+                div
+                    max-width: 40%
+                    display: inline-block
+                    margin-left: 3rem
+    #l
         display: block
-        width: 100%
-        margin: 0 auto
-    .containerj
-        display: block
-        width: 100%
-        margin: 1rem auto
-        :nth-child(3)
+        .containerl
             display: block
-            text-align: center
-            font-size: 1rem
             margin: 0 auto
             width: 90%
-        .infoj
+            box-sizing: border-box
+            font-size: 0
+            .contentl
+                box-sizing: border-box
+            :nth-child(2)
+                img
+                    max-width: 100%
+            :nth-child(3)
+                img
+                    max-width: 100%
+                .continfo
+                    box-sizing: border-box
+                    width: 32.5%
+                    margin: 0 auto
+                    img
+                        max-width: 100%
+    #n
+        .containerN
             display: block
+            width: 90%
             margin: 0 auto
-        .j1
-            display: none
-        .j2
-            display: block
-            margin: 0 auto
-        .j4
-            display: none
+            .infoN2
+                margin: 0 auto
+                margin-top: 7.5rem
+                h3
+                    display: inline-block
+                .infon2text
+                    display: block
+                    :nth-child(2)
+                        width: 40%
+                        h4
+                            width: 100%
+    /** media queries **/
+// @media all and ( max-width: 320px),
+//     #a //section a
+//         margin: 0
+//         padding: 0
+//         width: 100vw
+//         height: 100vh
+//         background: linear-gradient(rgba(243,129,129,0.8), rgba(252,227,138, 0.8))
+//         .container1
+//             position: relative
+//             width: 100%
+//             header
+//                 h1
+//                     display: none
+//                 img
+//                     display: none
+//                 nav
+//                     position: absolute
+//                     top: 50%
+//                     display: block
+//                     margin: 0
+//                     padding: 0
+//                     width: 100%
+//                     ul
+//                         display: block
+//                         margin: 0 auto
+//                         padding: 0
+//                         text-align: center
+//                         width: 62.5%
+//                         margin-top: 1rem
+//                         a
+//                             display: block
+//                             box-sizing: border-box
+//                             border: 3px solid $white
+//                             margin: 0
+//                             padding: 0
+//                             width: 100%
+//                             text-align: center
+//                             padding: 1rem
+//                             margin-top: 1rem
+//                             &:hover
+//                                 background: $regishh
+//                                 color: $white
+//                                 text-decoration: none
+//         .info1
+//             margin: 0
+//             padding: 0
+//             h2
+//                 display: none
+//             h3
+//                 font-size: 4rem
+//                 font-family: $Mont
+//                 font-weight: $bold
+//             img
+//                 padding: 0
+//                 margin: 0 auto
+//                 margin-top: 1.5rem
+//             button
+//                 margin: 0 auto
+//                 margin-top: 1rem
+
+//         .line1
+//             display: none
+//     #b //section b
+//         margin: 0
+//         padding: 0
+//         width: 100vw
+//         height: 100vh
+//         box-sizing: border-box
+//         .info2
+//             width: 90%
+//             display: block
+//             margin-top: 2rem
+//             p
+//                 margin-bottom: 2rem
+//             h2
+//                 margin-top: 1rem
+//         .photosContainer
+//             display: block
+//             margin: 0
+//             padding: 0
+//             width: 100%
+
+//             .image
+//                 margin: 1rem 0
+//                 padding: 0
+//                 display: block
+
+//             img
+//                 margin: 0 auto
+//                 padding: 0
+//                 width: 75%
+//             .nopicture
+//                 display: none
+//             .overlay
+//                 display: none
+//         .numbers2
+//             width: 100%
+//             padding: 0
+//             margin: 0
+
+//             .bloc
+//                 box-sizing: border-box
+//                 padding: 0
+//                 margin: 0
+//                 width: 100%
+//                 display: block
+//                 .containerNumber
+//                     box-sizing: bo
+//                     text-align: center
+//                     width: 20%
+//                     margin: 0 auto
+//                     padding: 0
+//                     border: none
+//                     border-right: 1px solid white
+//                     vertical-align: top
+//                     padding: 0
+//                     &:last-child
+//                         border: none
+//                     h5
+//                         font-size: 2rem
+//                         padding-top: 2rem
+//                         box-sizing: border-box
+
+//                     p
+//                         font-size: 1rem
+//                         padding-bottom: 1rem
+//                         text-align: center
+//                         padding-top: 1rem
+//                         box-sizing: border-box
+//     #c //section c
+//         display: block
+//         margin: 0 auto
+
+//         width: 100vw
+//     .container3
+//         .c1
+//             display: block
+//             margin: 0 auto
+//             width: 90%
+//             h4
+//                 margin-top: 1rem
+//         .c2
+//             display: block
+//             margin-top: 5rem
+//             width: 90%
+//             margin: 0 auto
+//             box-sizing: border-box
+//             text-align: center
+//             img
+//                 margin: 0
+//                 padding: 0
+//                 box-sizing: border-box
+//             h1
+//                 font-size: 1rem
+//                 margin-top: 1rem
+//             div
+//                 display: inline-block
+//                 width: 30%
+//                 box-sizing: border-box
+//                 margin: 2rem 0
+
+//                 p
+//                     display: inline-block
+//                     font-size: 1rem
+//                     width: 90%
+//                     margin: 1rem auto
+//                     height: 0
+//         .c3
+//             display: block
+//             margin-top: 5rem
+//             width: 90%
+//             margin: 0 auto
+//             box-sizing: border-box
+//             text-align: center
+//             img
+//                 margin: 0
+//                 padding: 0
+//                 box-sizing: border-box
+//             h1
+//                 font-size: 1rem
+//                 margin-top: 1rem
+//                 display: block
+//             div
+//                 display: inline-block
+//                 width: 30%
+//                 box-sizing: border-box
+//                 margin: 2rem 0
+
+//                 p
+//                     display: inline-block
+//                     font-size: 1rem
+//                     width: 90%
+//                     margin: 1rem auto
+//                     height: 0
+//     #d //section d
+//         display: block
+
+//         margin: 0 auto
+//         .container4
+//             padding-top: 3rem
+//         .d11
+//             width: 100%
+
+//         .d1
+//             width: 50%
+//             height: 50%
+//     #f //sectionf
+//         display: block
+//         margin: 0 auto
+//         width: 90%
+
+//         .info5
+//             display: block
+//             margin: 0 auto
+//             width: 90%
+//             h2
+//                 margin-top: 5rem
+//             p
+//                 margin-bottom: 3rem
+//         .containerF
+//             display: block
+//             width: 90%
+//             .imgimg
+//                 display: block
+//                 width: 90%
+//                 margin: 0 auto
+//                 margin-bottom: 1rem
+//             .textarea
+//                 display: block
+//                 margin: 0 auto
+//                 width: 90%
+//                 box-sizing: border-box
+//                 .margin
+//                     width: 100%
+
+//                 textarea
+//                     width: 100%
+//     #g //section g
+//         display: block
+//         width: 100%
+//         margin: 0 auto
+//         .containerG
+//             display: block
+//             width: 100%
+//             margin: 1rem auto
+//         :nth-child(3)
+//             display: block
+//             text-align: center
+//             font-size: 1rem
+
+//         .g1
+//             display: none
+//         .g4
+//             display: none
+//     #h //section h
+//         display: block
+//         width: 90%
+//         margin: 0 auto
+//         .containerH
+//         :nth-child(3)
+//             margin: 0
+//         .infoH
+//             display: block
+//             margin: 0 auto
+//             h4
+//                 width: 100%
+//             h2
+//                 width: 100%
+//         .portfolio
+//             display: block
+//             width: 100%
+//             margin-bottom: 0rem
+//             .teamMembers
+//                 display: block
+//                 width: 100%
+//                 margin-top: 3rem
+//                 .member-img
+//                     display: block
+//                     box-sizing: border-box
+//                     width: 100%
+
+//             img
+//                 width: 100%
+//     #i //section i
+//         display: block
+//         width: 100%
+//         margin-top: 2rem
+//         img
+//             width: 90%
+//     #y
+//         display: block
+//         width: 100%
+//         margin: 0 auto
+//         .containerY
+//             .infoY
+//                 display: block
+//                 width: 90%
+
+//             .photosY
+//                 widows: 100%
+//                 .blockStone
+//                     display: block
+//                     width: 90%
+//                     margin: 0 auto
+//                     .photosBox
+//                         display: block
+//                         width: 100%
+//                         margin-top: 2rem
+//                         .photos5
+//                             display: block
+//                             width: 100%
+//     #j //section j
+//         display: block
+//         width: 100%
+//         margin: 0 auto
+//     .containerj
+//         display: block
+//         width: 100%
+//         margin: 1rem auto
+//         :nth-child(3)
+//             display: block
+//             text-align: center
+//             font-size: 1rem
+//             margin: 0 auto
+//             width: 90%
+//         .infoj
+//             display: block
+//             margin: 0 auto
+//         .j1
+//             display: none
+//         .j2
+//             display: block
+//             margin: 0 auto
+//         .j4
+//             display: none
+//     #k //section k
+//         display: block
+//         margin: 0 auto
+//         width: 100%
+//         .containerk
+//             display: block
+//             margin: 0 auto
+//             width: 90%
+//             .infok
+//                 display: block
+//                 margin: 0 auto
+//                 width: 100%
+//                 padding-top: 2rem
+//             .containerpeople
+//                 display: block
+//                 margin: 0 auto
+//                 width: 100%
+//                 .people
+//                     display: block
+//                     margin: 0 auto
+//                     width: 100%
+//                     .p1
+//                         display: inline-block
+//                         width: 40%
+//                         margin: 0 auto
+//                         padding: 0
+//                         box-sizing: border-box
+//                         .p21
+//                             display: inline-block
+//                             margin: 0 auto
+//                             padding: 0
+//                             width: 100%
+//                             img
+//                                 display: inline-block
+//                                 margin: 0 auto
+//                                 padding: 0
+//                     .p2
+//                         display: inline-block
+//                         width: 40%
+//                         margin: 0 auto
+//                         padding: 0
+//                         vertical-align: top
+//                         img
+//                             margin-top: 0
+//                             padding: 0
+
+//                         .p22
+//                             display: inline-block
+//                             margin: 0 auto
+//                             padding: 0
+//                             width: 100%
+
+//                             img
+//                                 display: inline-block
+//                                 margin: 0 auto
+//                                 padding: 0

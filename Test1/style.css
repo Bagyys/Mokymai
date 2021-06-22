@@ -69,24 +69,30 @@ html {
   display: inline-block;
   width: 100%;
   margin-top: 2.4rem;
+  text-align: right;
+  position: relative;
 }
-.container1 header h1 {
-  display: inline-block;
-  font-family: "Montserrat";
-  font-size: 3rem;
-  font-weight: 700;
-  color: white;
-  width: 50%;
+.container1 header .mogologo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .container1 header nav {
   display: inline-block;
-  width: 50%;
+}
+.container1 header nav ul {
+  display: inline-block;
+  max-width: 100%;
 }
 .container1 header nav ul :nth-child(6) {
+  display: inline-block;
+  max-width: 100%;
   margin-right: 4.9rem;
 }
 .container1 header nav ul :nth-child(7) {
   margin-right: 0;
+  display: inline-block;
+  max-width: 100%;
 }
 .container1 header nav ul a {
   font-family: "Montserrat";
@@ -95,6 +101,7 @@ html {
   text-transform: uppercase;
   margin-right: 4.9rem;
   text-decoration: none;
+  max-width: 100%;
 }
 .container1 header nav ul :hover {
   color: #fce38a;
@@ -259,16 +266,17 @@ html {
   margin-bottom: 11rem;
 }
 .photosContainer :nth-child(2) {
-  margin: 0 30px;
+  margin: 0 2rem;
 }
 
 .image {
   position: relative;
   display: inline-block;
+  max-width: 100%;
 }
 
 .image-img {
-  display: block;
+  display: inline-block;
 }
 
 .overlay {
@@ -486,6 +494,11 @@ html {
   display: block;
   margin: 0 auto;
   font-size: 0;
+  width: 100%;
+}
+#f .container5 {
+  display: block;
+  margin: 0 auto;
   width: 62.5%;
 }
 #f .info5 {
@@ -522,16 +535,23 @@ html {
   display: block;
   margin: 0 auto;
   font-size: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 12rem;
 }
-.containerF img {
+.containerF .imgimg {
   display: inline-block;
+  max-width: 100%;
+  margin-right: 3rem;
 }
 .containerF .textarea {
   display: inline-block;
-  width: 50%;
-  margin-bottom: 12rem;
-  margin-left: 2.5rem;
+  width: 0;
   vertical-align: top;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
 }
 .containerF .textarea :nth-child(3) {
   margin-top: 1rem;
@@ -816,7 +836,6 @@ html {
   padding: 6rem 0;
   background-position: center;
   background-size: contain;
-  width: 100%;
 }
 
 #y {
@@ -883,6 +902,7 @@ html {
 
 .photos5 {
   display: block;
+  max-width: 100%;
 }
 
 .overlayBox {
@@ -1230,7 +1250,7 @@ html {
 
 .infoN1 {
   display: inline-block;
-  width: 40%;
+  max-width: 40%;
   box-sizing: border-box;
   vertical-align: top;
   margin-top: 7.5rem;
@@ -1302,10 +1322,10 @@ html {
 
 .infoN2 {
   display: inline-block;
-  width: 30%;
+  max-width: 30%;
   box-sizing: border-box;
   vertical-align: bottom;
-  margin: 0 4.5rem;
+  margin: 0 4rem;
   margin-top: 8rem;
   vertical-align: top;
 }
@@ -1313,7 +1333,6 @@ html {
   display: inline-block;
   margin: 0 auto;
   font-size: 0;
-  width: 100%;
   box-sizing: border-box;
 }
 .infoN2 div img {
@@ -1350,7 +1369,7 @@ html {
 
 .infoN3 {
   display: inline-block;
-  width: 22.5%;
+  max-width: 22.5%;
   box-sizing: border-box;
   margin-top: 7.5rem;
   vertical-align: top;
@@ -1362,6 +1381,9 @@ html {
   color: #333333;
   text-transform: uppercase;
   margin-bottom: 2.8rem;
+}
+.infoN3 img {
+  max-width: 100%;
 }
 .infoN3 h6 {
   font-family: "Roboto";
@@ -1404,7 +1426,6 @@ footer hr {
   margin: 0 auto;
   font-size: 0;
   width: 62.5%;
-  /** media queries **/
 }
 .containerFooter h2 {
   text-align: center;
@@ -1417,415 +1438,194 @@ footer hr {
   color: #f38181;
 }
 
-@media all and (max-width: 320px), (max-height: 568px) {
+/** media queris  **/
+@media all and (max-width: 1024px) {
   #a {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(rgba(243, 129, 129, 0.8), rgba(252, 227, 138, 0.8));
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    background-position: center;
+    padding-top: 5rem;
+    box-sizing: border-box;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #a .container1 {
-    position: relative;
-    width: 100%;
-  }
-  #a .container1 header h1 {
-    display: none;
-  }
-  #a .container1 header img {
-    display: none;
-  }
-  #a .container1 header nav {
-    position: absolute;
-    top: 50%;
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  #a .container1 header nav ul {
     display: block;
     margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    width: 62.5%;
-    margin-top: 1rem;
+    width: 90%;
   }
-  #a .container1 header nav ul a {
+  #a .container1 header {
     display: block;
-    box-sizing: border-box;
-    border: 3px solid white;
-    margin: 0;
-    padding: 0;
     width: 100%;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
-  }
-  #a .container1 header nav ul a:hover {
-    background: #f38181;
-    color: white;
-    text-decoration: none;
-  }
-  #a .info1 {
-    margin: 0;
-    padding: 0;
-  }
-  #a .info1 h2 {
-    display: none;
-  }
-  #a .info1 h3 {
-    font-size: 4rem;
-    font-family: "Montserrat";
-    font-weight: 700;
-  }
-  #a .info1 img {
-    padding: 0;
     margin: 0 auto;
-    margin-top: 1.5rem;
   }
-  #a .info1 button {
-    margin: 0 auto;
-    margin-top: 1rem;
+  #a .container1 .info1 h3 {
+    font-size: 10rem;
   }
-  #a .line1 {
-    display: none;
+  #a .container1 div .line1 .padding {
+    width: 80%;
   }
 
-  #b {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-  }
-  #b .info2 {
-    width: 90%;
-    display: block;
-    margin-top: 2rem;
-  }
-  #b .info2 p {
-    margin-bottom: 2rem;
-  }
-  #b .info2 h2 {
-    margin-top: 1rem;
-  }
   #b .photosContainer {
     display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    width: 62.5%;
+    margin: 0 auto;
+  }
+  #b .photosContainer :nth-child(2) {
+    margin: 3rem 0;
   }
   #b .photosContainer .image {
-    margin: 1rem 0;
-    padding: 0;
+    display: block;
+    margin: 0 auto;
+    font-size: 0;
+    max-width: 59.5%;
+  }
+  #b .photosContainer .image img {
+    margin: 2rem auto;
     display: block;
   }
-  #b .photosContainer img {
-    margin: 0 auto;
-    padding: 0;
-    width: 75%;
-  }
-  #b .photosContainer .nopicture {
-    display: none;
-  }
-  #b .photosContainer .overlay {
-    display: none;
-  }
-  #b .numbers2 {
+  #b .photosContainer .image .overlay {
     width: 100%;
-    padding: 0;
-    margin: 0;
+    top: -30px;
+    left: 0;
   }
-  #b .numbers2 .bloc {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: block;
+  #b .numbers2 :nth-child(2) h5 {
+    margin-bottom: 1.5rem;
   }
-  #b .numbers2 .bloc .containerNumber {
-    box-sizing: bo;
-    text-align: center;
-    width: 20%;
-    margin: 0 auto;
-    padding: 0;
-    border: none;
-    border-right: 1px solid white;
+  #b .numbers2 :nth-child(4) h5 {
+    margin-bottom: 1.5rem;
+  }
+  #b .numbers2 :nth-child(5) h5 {
+    margin-bottom: 1.5rem;
+  }
+  #b .numbers2 :nth-child(5) .containerNumer {
     vertical-align: top;
-    padding: 0;
-  }
-  #b .numbers2 .bloc .containerNumber:last-child {
-    border: none;
-  }
-  #b .numbers2 .bloc .containerNumber h5 {
-    font-size: 2rem;
-    padding-top: 2rem;
-    box-sizing: border-box;
-  }
-  #b .numbers2 .bloc .containerNumber p {
-    font-size: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    padding-top: 1rem;
-    box-sizing: border-box;
   }
 
   #c {
     display: block;
     margin: 0 auto;
-    width: 100vw;
+    width: 62.5%;
   }
-
-  .container3 .c1 {
+  #c .container3 {
     display: block;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
   }
-  .container3 .c1 h4 {
-    margin-top: 1rem;
+  #c .container3 .c2 div p {
+    width: 60%;
+    margin-bottom: 8rem;
   }
-  .container3 .c2 {
-    display: block;
-    margin-top: 5rem;
-    width: 90%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  .container3 .c2 img {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .container3 .c2 h1 {
-    font-size: 1rem;
-    margin-top: 1rem;
-  }
-  .container3 .c2 div {
-    display: inline-block;
-    width: 30%;
-    box-sizing: border-box;
+  #c .container3 hr {
     margin: 2rem 0;
   }
-  .container3 .c2 div p {
+  #c .container3 .c3 div p {
+    width: 60%;
+  }
+
+  #f .container5 .containerF .imgimg {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  #f .container5 .containerF .textarea {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  #f .container5 .containerF .textarea .margin {
+    display: block;
+    margin: 0 auto;
+  }
+  #f .container5 .containerF .textarea .texttrans {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #g .containerG .info6 {
     display: inline-block;
-    font-size: 1rem;
-    width: 90%;
-    margin: 1rem auto;
-    height: 0;
-  }
-  .container3 .c3 {
-    display: block;
-    margin-top: 5rem;
-    width: 90%;
     margin: 0 auto;
-    box-sizing: border-box;
-    text-align: center;
   }
-  .container3 .c3 img {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .container3 .c3 h1 {
-    font-size: 1rem;
-    margin-top: 1rem;
-    display: block;
-  }
-  .container3 .c3 div {
+  #g .containerG .info6 .g2 {
     display: inline-block;
-    width: 30%;
-    box-sizing: border-box;
-    margin: 2rem 0;
+    margin-right: 9rem;
+    margin-left: 0;
   }
-  .container3 .c3 div p {
+  #g .containerG .info6 div {
+    max-width: 40%;
     display: inline-block;
-    font-size: 1rem;
-    width: 90%;
-    margin: 1rem auto;
-    height: 0;
+    margin-left: 3rem;
   }
 
-  #d {
-    display: block;
-    margin: 0 auto;
-  }
-  #d .container4 {
-    padding-top: 3rem;
-  }
-  #d .d11 {
-    width: 100%;
-  }
-  #d .d1 {
-    width: 50%;
-    height: 50%;
-  }
-
-  #f {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-  }
-  #f .info5 {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-  }
-  #f .info5 h2 {
-    margin-top: 5rem;
-  }
-  #f .info5 p {
-    margin-bottom: 3rem;
-  }
-  #f .containerF {
-    display: block;
-    width: 90%;
-  }
-  #f .containerF .imgimg {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-  }
-  #f .containerF .textarea {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    box-sizing: border-box;
-  }
-  #f .containerF .textarea .margin {
-    width: 100%;
-  }
-  #f .containerF .textarea textarea {
-    width: 100%;
-  }
-
-  #g {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
-  #g .containerG {
-    display: block;
-    width: 100%;
-    margin: 1rem auto;
-  }
-  #g :nth-child(3) {
-    display: block;
-    text-align: center;
-    font-size: 1rem;
-  }
-  #g .g1 {
-    display: none;
-  }
-  #g .g4 {
-    display: none;
-  }
-
-  #h {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-  }
-  #h :nth-child(3) {
-    margin: 0;
-  }
-  #h .infoH {
-    display: block;
-    margin: 0 auto;
-  }
-  #h .infoH h4 {
-    width: 100%;
-  }
-  #h .infoH h2 {
-    width: 100%;
-  }
-  #h .portfolio {
-    display: block;
-    width: 100%;
-    margin-bottom: 0rem;
-  }
-  #h .portfolio .teamMembers {
-    display: block;
-    width: 100%;
-    margin-top: 3rem;
-  }
-  #h .portfolio .teamMembers .member-img {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  #h .portfolio img {
-    width: 100%;
-  }
-
-  #i {
-    display: block;
-    width: 100%;
-    margin-top: 2rem;
-  }
   #i img {
-    width: 90%;
+    max-width: 100%;
   }
 
-  #y {
-    display: block;
-    width: 100%;
+  #j .containerj .infoj {
+    display: inline-block;
     margin: 0 auto;
   }
-  #y .containerY .infoY {
+  #j .containerj .infoj .j2 {
+    display: inline-block;
+    margin-right: 3rem;
+    margin-left: 0;
+  }
+  #j .containerj .infoj div {
+    max-width: 40%;
+    display: inline-block;
+    margin-left: 3rem;
+  }
+
+  #l {
     display: block;
+  }
+  #l .containerl {
+    display: block;
+    margin: 0 auto;
     width: 90%;
+    box-sizing: border-box;
+    font-size: 0;
   }
-  #y .containerY .photosY {
-    widows: 100%;
+  #l .containerl .contentl {
+    box-sizing: border-box;
   }
-  #y .containerY .photosY .blockStone {
+  #l .containerl :nth-child(2) img {
+    max-width: 100%;
+  }
+  #l .containerl :nth-child(3) img {
+    max-width: 100%;
+  }
+  #l .containerl :nth-child(3) .continfo {
+    box-sizing: border-box;
+    width: 32.5%;
+    margin: 0 auto;
+  }
+  #l .containerl :nth-child(3) .continfo img {
+    max-width: 100%;
+  }
+
+  #n .containerN {
     display: block;
     width: 90%;
     margin: 0 auto;
   }
-  #y .containerY .photosY .blockStone .photosBox {
-    display: block;
-    width: 100%;
-    margin-top: 2rem;
+  #n .containerN .infoN2 {
+    margin: 0 auto;
+    margin-top: 7.5rem;
   }
-  #y .containerY .photosY .blockStone .photosBox .photos5 {
+  #n .containerN .infoN2 h3 {
+    display: inline-block;
+  }
+  #n .containerN .infoN2 .infon2text {
     display: block;
+  }
+  #n .containerN .infoN2 .infon2text :nth-child(2) {
+    width: 40%;
+  }
+  #n .containerN .infoN2 .infon2text :nth-child(2) h4 {
     width: 100%;
   }
 
-  #j {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .containerj {
-    display: block;
-    width: 100%;
-    margin: 1rem auto;
-  }
-  .containerj :nth-child(3) {
-    display: block;
-    text-align: center;
-    font-size: 1rem;
-    margin: 0 auto;
-    width: 90%;
-  }
-  .containerj .infoj {
-    display: block;
-    margin: 0 auto;
-  }
-  .containerj .j1 {
-    display: none;
-  }
-  .containerj .j2 {
-    display: block;
-    margin: 0 auto;
-  }
-  .containerj .j4 {
-    display: none;
-  }
+  /** media queries **/
 }/*# sourceMappingURL=style.css.map */
